@@ -1,4 +1,6 @@
 import React from "react";
+import { AppH2 } from "../components/AppH2";
+import { AppBtn } from "../components/AppBtn";
 
 const StepThree = () => {
   return (
@@ -7,10 +9,8 @@ const StepThree = () => {
         <div className="emoji-quiz">
           <div className="indicator">
             <div className="indicator__text">
-              <span className="indicator__description">
-                Скидка за прохождение опроса:
-              </span>
-              <span className="indicator__value">15%</span>
+            <AppSpan/>
+              <AppSpan2/>
             </div>
             <div className="indicator__progressbar">
               <div className="indicator__unit indicator__unit-1 _active"></div>
@@ -20,7 +20,7 @@ const StepThree = () => {
             </div>
           </div>
           <div className="question">
-            <h2>3. Занимательный вопрос</h2>
+            <AppH2/>
             <ul className="emoji-variants">
               <li className="variant-wrapper">
                 <input required type="radio" name="variant" id="variant-1" />
@@ -51,9 +51,7 @@ const StepThree = () => {
                 </label>
               </li>
             </ul>
-            <button type="button" disabled id="next-btn">
-              Далее
-            </button>
+            <AppBtn/>
           </div>
         </div>
       </div>

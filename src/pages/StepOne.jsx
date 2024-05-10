@@ -1,4 +1,9 @@
 import React from "react";
+import { AppH2 } from "../components/AppH2";
+import { AppLabel } from "../components/AppLabel";
+import { AppBtn } from "../components/AppBtn";
+import { AppSpan } from "../components/AppSpan";
+import { AppSpan2 } from "../components/AppSpan2";
 
 const StepOne = () => {
   return (
@@ -7,10 +12,8 @@ const StepOne = () => {
         <div className="single-input-quiz">
           <div className="indicator">
             <div className="indicator__text">
-              <span className="indicator__description">
-                Скидка за прохождение опроса:
-              </span>
-              <span className="indicator__value">15%</span>
+              <AppSpan/>
+              <AppSpan2/>
             </div>
             <div className="indicator__progressbar">
               <div className="indicator__unit indicator__unit-1"></div>
@@ -20,21 +23,9 @@ const StepOne = () => {
             </div>
           </div>
           <div className="question">
-            <h2>1. Занимательный вопрос</h2>
-            <label className="input-wrapper">
-              <input
-                required
-                type="text"
-                name="answer"
-                placeholder="Ваш ответ"
-              />
-              <span id="error-message">
-                Введите номер в правильном формате например
-              </span>
-            </label>
-            <button type="button" disabled id="next-btn">
-              Далее
-            </button>
+           <AppH2/>
+            <AppLabel attValue={'text'}  attName={'name'} inputName={'Номер'} inputHolder={'Ваш ответ'}/>
+            <AppBtn/>
           </div>
         </div>
       </div>

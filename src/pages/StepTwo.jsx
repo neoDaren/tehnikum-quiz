@@ -7,10 +7,8 @@ const StepTwo = () => {
         <div className="variants-quiz">
           <div className="indicator">
             <div className="indicator__text">
-              <span className="indicator__description">
-                Скидка за прохождение опроса:
-              </span>
-              <span className="indicator__value">15%</span>
+            <AppSpan/>
+              <AppSpan2/>
             </div>
             <div className="indicator__progressbar">
               <div className="indicator__unit indicator__unit-1 _active"></div>
@@ -20,7 +18,7 @@ const StepTwo = () => {
             </div>
           </div>
           <div className="question">
-            <h2>1. Занимательный вопрос</h2>
+          <AppH2/>
             <ul className="variants">
               <li className="variant-wrapper">
                 <input required type="radio" name="variant-1" id="variant-1" />
@@ -39,9 +37,7 @@ const StepTwo = () => {
                 <label htmlFor="variant-4">Ваш ответ</label>
               </li>
             </ul>
-            <button type="button" disabled id="next-btn">
-              Далее
-            </button>
+            <AppBtn/>
           </div>
         </div>
       </div>
