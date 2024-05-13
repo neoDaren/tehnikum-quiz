@@ -8,11 +8,27 @@ const Welcome = () => {
     <div className="container">
       <div className="wrapper">
         <div className="welcome">
-         <AppHeader/> 
+         <AppHeader 
+              headerText={'Добро пожаловать в квиз от лучшего учебного центра'}
+              headerType={'h1'}/> 
           <form className="welcome__form">
-            <AppLabel inputLabel={'Ваше имя'} inputHolder={'Напишите свое имя'} inputName={'имя'} attValue={'text'}/>
-            <AppLabel inputLabel={'Ваш номер телефона'} inputHolder={'+998 9_ ___-__-__'} inputName={'номер'} attName={'name'}/>
-            <AppBtn/>
+            <AppLabel 
+              inputLabel='Ваше имя'
+              inputPlaceHolder={'Напишите свое имя'} 
+              id={'username'} 
+              inputType={'text'}
+              errorText='Введите правильный формат Имени'/>
+            <AppLabel 
+              inputLabel={'Ваш номер телефона'} 
+              inputPlaceHolder={'+998 9_ ___-__-__'} 
+              inputType={'tel'} 
+              id={'phone'}
+              errorText={'Введите номер в правильном формате'}
+              />
+            <AppBtn 
+            isDisable={false} 
+            buttonType='button' 
+            buttonText='Далее'/>
           </form>
         </div>
       </div>

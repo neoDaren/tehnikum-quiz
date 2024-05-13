@@ -1,9 +1,10 @@
 import React from "react";
-import { AppH2 } from "../components/AppH2";
+
 import { AppLabel } from "../components/AppLabel";
 import { AppBtn } from "../components/AppBtn";
 import { AppSpan } from "../components/AppSpan";
 import { AppSpan2 } from "../components/AppSpan2";
+import { AppHeader } from "../components/AppHeader";
 
 const StepOne = () => {
   return (
@@ -23,9 +24,36 @@ const StepOne = () => {
             </div>
           </div>
           <div className="question">
-           <AppH2/>
-            <AppLabel attValue={'text'}  attName={'name'} inputName={'Номер'} inputHolder={'Ваш ответ'}/>
-            <AppBtn/>
+          <AppHeader 
+              headerText={'1. Занимательный вопрос'}
+              headerType={'h2'}/> 
+            <AppLabel 
+              isRequired={true}
+              inputType={'text'}
+              id={'answer'}
+              inputPlaceHolder={'Ваш ответ'}
+              errorText={'Введите номер в правильном формате например'}
+            />
+            <AppBtn
+              isDisable={false}
+              buttonType={'button'}
+              buttonText={'Далее'}
+            />
+            {/* <h2>1. Занимательный вопрос</h2>
+            <label className="input-wrapper">
+              <input
+                required
+                type="text"
+                name="answer"
+                placeholder="Ваш ответ"
+              />
+              <span id="error-message">
+                Введите номер в правильном формате например
+              </span>
+            </label>
+            <button type="button" disabled id="next-btn">
+              Далее
+            </button> */}
           </div>
         </div>
       </div>
